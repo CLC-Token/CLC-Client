@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sv_success"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/fl_top"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintHeight_percent="0.32"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/create_success"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/lav_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/wallet_emtpy"
+                android:visibility="visible"/>
+
+            <!--<com.airbnb.lottie.LottieAnimationView-->
+                <!--android:id="@+id/lav_top"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:visibility="visible"/>-->
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_creatting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/fl_top">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="@string/wallet_creatting"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:textColor="@color/darkBlueGrey"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="55dp"
+                android:gravity="center"
+                android:text="@string/wallet_creatting_desc"
+                android:textColor="@color/brownishGrey"
+                android:textSize="@dimen/sp_16"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+             android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/fl_top">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="@string/wallet_creat_success"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:textColor="@color/darkBlueGrey"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="37dp"
+                android:lineSpacingExtra="5dp"
+                android:gravity="center"
+                android:text="@string/wallet_creat_success_desc"
+                android:textColor="@color/brownishGrey"
+                android:textSize="@dimen/sp_14"/>
+
+            <LinearLayout
+                android:background="@drawable/bg_corn_pale_flue_5dp"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="37dp"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txt_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textColor="@color/darkBlueGrey"
+                    android:textSize="@dimen/sp_16"/>
+
+                <TextView
+                    android:id="@+id/txt_private"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:gravity="start"
+                    android:textColor="@color/darkBlueGrey"
+                    android:textSize="@dimen/sp_16"/>
+            </LinearLayout>
+
+
+            <Button
+
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="37dp"
+                android:background="@drawable/btn_summit"
+                android:clickable="false"
+                android:layout_marginBottom="25dp"
+                android:text="@string/wallet_copy_pri"
+                android:textAllCaps="false"
+                android:textColor="@drawable/text_summit2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_success"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/fl_top">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:text="@string/words_create_success"
+                android:textColor="@color/brightBlueTwo"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="45dp"
+                android:text="@string/word_create_tips"
+                android:textColor="@color/warmGrey"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="6dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="22dp"
+                    android:background="@drawable/dot_blue"
+                    android:layout_height="6dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="45dp"
+                    android:text="@string/words_backup"
+                    android:textColor="@color/brightBlueTwo"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="45dp"
+                android:text="@string/words_backup_tips"
+                android:textColor="@color/warmGrey"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="6dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="22dp"
+                    android:background="@drawable/dot_blue"
+                    android:layout_height="6dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="45dp"
+                    android:text="@string/word_work"
+                    android:textColor="@color/brightBlueTwo"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+            <TextView
+            android:layout_width="wrap_content"
+            android:textSize="16dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="45dp"
+            android:text="@string/word_work_tips"
+            android:textColor="@color/warmGrey"
+            android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_ok"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="37dp"
+                android:background="@drawable/btn_summit"
+                android:clickable="false"
+                android:layout_marginBottom="25dp"
+                android:text="@string/wallet_copy_pri"
+                android:textAllCaps="false"
+                android:textColor="@drawable/text_summit2"/>
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

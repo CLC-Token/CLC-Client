@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true" >
+
+    <FrameLayout
+        android:id="@+id/fl_zxing_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp" >
+
+        <TextView
+            android:id="@+id/txt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back_selector"
+            android:drawableLeft="@drawable/arrow_left"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:maxWidth="200dp"
+            android:singleLine="true"
+            android:text="@string/_scan_qrcode_title"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/img_right2"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/back_selector"
+            android:src="@drawable/flash_selector"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    
+    <RelativeLayout
+        android:background="@color/white_0.2alpha"
+        android:id="@+id/layout_by_album"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_width="203dp"
+        android:layout_height="40dp">
+        <ImageView
+            android:id="@+id/img_by_album"
+            android:src="@drawable/scan_photo"
+            android:layout_width="20dp"
+            android:layout_height="16dp"/>
+
+        <TextView
+            android:layout_marginLeft="9.5dp"
+            android:textSize="@dimen/small_text_size"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@id/img_by_album"
+            android:text="@string/select_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginBottom="35.5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_above="@+id/layout_by_album"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/_scan_qrcode_tip"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+</RelativeLayout>

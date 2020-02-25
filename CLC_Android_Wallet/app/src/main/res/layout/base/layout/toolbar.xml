@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/vg_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/head_height"
+    android:orientation="vertical">
+
+    <!--android:layout_height="?attr/actionBarSize"-->
+    <!-- android:background="?attr/colorPrimary" -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/white"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextColor="#373737">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <!--android:background="@drawable/common_translucent_selector"-->
+
+            <!--<include layout="@layout/titlebar_title"/>-->
+
+            <TextView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:maxEms="12"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#373737"
+                android:textSize="18sp"
+                tools:showIn="@layout/toolbar"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <!--<FrameLayout
+        android:layout_gravity="right|center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </FrameLayout>
+-->
+    <!--<include
+        layout="@layout/toolbar_edit_action"
+        android:visibility="gone"/>-->
+
+    <RelativeLayout
+        android:id="@+id/layout_toolbar_edit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="?attr/colorPrimary"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt_edit_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:background="@drawable/common_transparent_selector"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/string_cancel"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/txt_edit_center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/select_title"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/txt_edit_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:background="@drawable/common_transparent_selector"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/select_all"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/app_name"
+            android:textColor="@color/darkBlueGrey"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="25dp"
+            android:gravity="center"
+            android:text="@string/wallet_empty_desc"
+            android:textColor="@color/darkBlueGrey"
+            android:textSize="@dimen/sp_12"/>
+
+
+        <Button
+            android:id="@+id/btn_create"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="37dp"
+            android:background="@drawable/btn_summit"
+            android:clickable="false"
+            android:text="@string/wallet_create_account"
+            android:textAllCaps="false"
+            android:textColor="@drawable/text_summit2"/>
+
+        <Button
+            android:id="@+id/btn_import"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="37dp"
+            android:background="@drawable/btn_grey"
+            android:text="@string/wallet_me_pop_import"
+            android:textAllCaps="false"
+            android:textColor="@drawable/text_summit1"/>
+
+    </LinearLayout>
+</ScrollView>

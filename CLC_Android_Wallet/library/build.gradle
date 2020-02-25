@@ -1,0 +1,59 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+//    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    packagingOptions {//加上这写代码
+        pickFirst 'META-INF/rxjava.properties'
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+//    compile fileTree(dir: 'libs', include: ['*.jar'])
+    //Retrofit+RxJava网络框架
+    api 'com.squareup.retrofit2:retrofit:2.4.0'
+//    implementation(name: 'btrsdk', ext: 'aar')
+    api ('com.squareup.retrofit2:converter-gson:2.4.0'){//gson转换跟btrsdk重复
+        exclude group:'com.google.code.gson'
+    }
+//    compile 'com.squareup.retrofit2:converter-gson:2.4.0'
+    compileOnly files('libs/gson-2.8.2.jar')
+    api 'com.squareup.retrofit2:adapter-rxjava:2.4.0'
+    api 'io.reactivex:rxandroid:1.2.1'//处理网络请求在android中线程调度问题
+    api 'com.trello.rxlifecycle2:rxlifecycle:2.2.1'//解决RxJava内存泄漏
+    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.1'
+    api 'com.squareup.okhttp3:logging-interceptor:3.11.0'//使用拦截器
+    api 'org.greenrobot:eventbus:3.1.1'  //数据传递
+
+//    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    api 'com.github.bumptech.glide:glide:4.8.0' //图片加载
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation "com.github.bumptech.glide:okhttp3-integration:4.6.1"
+}

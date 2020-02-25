@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="open_camera_failure">Fail to open the camera</string>
+    <string name="_scan_qrcode_title">Scan the QR Code</string>
+    <string name="parse_qr_code_fail">Fail to parsing the QR Code!</string>
+    <string name="_scan_qrcode_tip1">Unable to recognize the QR Code!</string>
+    <string name="_scan_qrcode_tip2">This is the QR Code of the device model\nPlease scan the bar code at the bottom of CumeBox to bind device.</string>
+    <string name="select_photo">Select Album</string>
+    <string name="_scan_qrcode_tip">Please align the bar code or QR Code of CumeBox within the frame to scan</string>
+    <string name="copy_success">Copy to Clipboard</string>
+    <string name="_copy">Copy</string>
+    <string name="_restart_scan">Re-scan</string>
+    <string name="_scan_qrcode_title_tip">Tips</string>
+    <string name="_scan_qrcode_title_result">Result</string>
+    <string name="please_select_picture">Please select image</string>
+
+</resources>

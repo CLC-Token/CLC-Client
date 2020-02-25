@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/vg_toolbar"
+        layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:visibility="gone"
+                android:background="@drawable/wallet_me_head_bg"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:text="@string/wallet_detail_balance_transfer"
+                    android:textColor="#CECFD8"
+                    android:textSize="@dimen/sp_12"/>
+                <!--获取所有米袋btr的总值-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_about"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/wallet_me_about"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_12"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/tv_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/string_default_value"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    android:text="@string/string_btd"
+                    android:visibility="gone"
+                    android:textColor="@color/white_0.7"
+                    android:textSize="@dimen/sp_12"/>
+            </LinearLayout>
+
+
+            <!--app:cardUseCompatPadding="true"-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_view1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="76dp"
+                android:layout_marginRight="12dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginTop="31dp"
+                        android:layout_marginRight="25dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ll_view2"
+                            android:text="@string/wallet_transfer_addr"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/normal_text_size"/>
+
+                        <LinearLayout
+                            android:id="@+id/ll_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="19dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/et_addr"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/ll_view2"
+                                android:layout_weight="1"
+                                android:background="#00000000"
+                                android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                android:ellipsize="end"
+                                android:hint="@string/wallet_transfer_addr_hint"
+                                android:inputType="textEmailAddress"
+                                android:scrollbars="horizontal"
+                                android:singleLine="true"
+                                android:textColor="@color/black20"
+                                android:textSize="@dimen/normal_text_size"/>
+
+                            <ImageView
+                                android:id="@+id/iv_scan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/bitrich_transferaccounts_scan"/>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_marginTop="5dp"
+                            android:background="#cccccc"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_view2"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="25dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wallet_transfer_money"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/normal_text_size"/>
+
+                        <LinearLayout
+                            android:id="@+id/ll_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="19dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/et_money"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/ll_view2"
+                                android:layout_weight="1"
+                                android:background="#00000000"
+                                android:hint="@string/wallet_transfer_money_hint"
+                                android:inputType="number|numberDecimal"
+                                android:maxLines="1"
+                                android:textColor="@color/black20"
+                                android:textSize="@dimen/normal_text_size"/>
+
+                            <TextView
+                                android:id="@+id/txt_unit_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/string_btd"
+                                android:textColor="@color/black_5"
+                                android:textSize="@dimen/normal_text_size"/>
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_marginTop="5dp"
+                            android:background="#cccccc"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="23dp"
+                            android:text="@string/transfer_remark"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/normal_text_size"/>
+
+                        <FrameLayout
+                            android:id="@+id/fl_remark"
+                            android:layout_width="match_parent"
+                            android:layout_height="64dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/bg_transfer_backup"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/et_remark"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="10dp"
+                                android:background="#00000000"
+                                android:hint="@string/transfer_remark_hint"
+                                android:maxLength="20"
+                                android:maxLines="3"
+                                android:textColor="@color/black20"
+                                android:textSize="@dimen/normal_text_size"/>
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_expect_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_view3"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="26dp"
+                        android:textColor="@color/black_5"
+                        android:textSize="@dimen/small_text_size"/>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <Button
+                android:id="@+id/btn_confirm"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/cv_view1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/btn_summit"
+                android:text="@string/wallet_transfer_confirm"
+                android:textAllCaps="false"
+                android:textColor="@drawable/text_summit2"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

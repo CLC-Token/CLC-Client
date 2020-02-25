@@ -1,0 +1,438 @@
+<resources>
+    <!--<string name="app_name">CLC Wallet</string>-->
+    <!--<string name="app_name_test">CLC Test</string>-->
+    <!--<string name="string_cancel">取消</string>-->
+    <!--<string name="select_title">编辑</string>-->
+    <!--<string name="select_all">全选</string>-->
+    <!--<string name="invalid_time">无效时间</string>-->
+    <!--<string name="activity_empty_txt_content">空空如也</string>-->
+    <!--<string name="please_sure_read_write_extra_permisssion">请去系统设置，打开“CLC Wallet”应用读写权限</string>-->
+    <!--<string name="skip_intro">跳过</string>-->
+    <!--<string name="skip_intro_next">立即体验</string>-->
+
+    <!--<string name="string_hint">提示</string>-->
+    <!--<string name="string_ok">确定</string>-->
+    <!--<string name="please_select">请选择</string>-->
+    <!--<string name="unselect_all">全不选</string>-->
+    <!--<string name="activity_custom_loding_dialog_layout_txt_loading">亲，小的正卖力加载中</string>-->
+    <!--<string name="activity_custom_loding_dialog_layout_txt_point">...</string>-->
+
+    <!--<string name="connect_fail">连接钱包超时</string>-->
+    <!--<string name="wallet_account_name">账户</string>-->
+    <!--<string name="wallet_private_key_hint">请输入CLC钱包私钥</string>-->
+    <!--<string name="wallet_scret_error">私钥错误,请重新输入</string>-->
+    <!--<string name="phone_is_exist">账号已存在</string>-->
+    <!--<string name="wallet_toast_pwd_empty">输入密码不能为空</string>-->
+    <!--<string name="wallet_toast_agree">请点击同意协议再继续</string>-->
+    <!--<string name="wallet_toast_difference">输入不一致</string>-->
+    <!--<string name="wallet_toast_error">密码错误</string>-->
+    <!--<string name="wallet_toast_not_subter_8">输入长度不能少于8个数字</string>-->
+    <!--<string name="wallet_create_import_fail">导入CLC钱包失败</string>-->
+    <!--<string name="wallet_create_import_success">导入CLC钱包成功</string>-->
+
+    <!--<string name="wallet_me_title">我的CLC</string>-->
+    <!--<string name="string_btd">CLC</string>-->
+    <!--<string name="string_hdt">HDT</string>-->
+    <!--<string name="wallet_detail_titile">账户详情</string>-->
+    <!--<string name="wallet_me_pop_new">新建账户</string>-->
+    <!--<string name="wallet_detail_pop_rename">重新命名</string>-->
+    <!--<string name="wallet_me_pop_import">导入账户</string>-->
+    <!--<string name="wallet_look_private_key">查看私钥</string>-->
+    <!--<string name="wallet_record_title">交易记录</string>-->
+    <!--<string name="wallet_record_item_time">今天</string>-->
+    <!--<string name="wallet_record_item_out">转出</string>-->
+    <!--<string name="wallet_record_item_in">转入</string>-->
+    <!--<string name="wallet_detail_pop_delete">删除钱包</string>-->
+    <!--<string name="input_pay_pwd">输入交易密码</string>-->
+    <!--<string name="input_pay_pwd_hint">请输入不少于8位数交易密码</string>-->
+    <!--<string name="wallet_transfer_success_btn">确认</string>-->
+    <!--<string name="string_submit">提交</string>-->
+    <!--<string name="wallet_detail_freeze_btd">CLC已被冻结，不能进行转账</string>-->
+    <!--<string name="wallet_detail_freeze_hdt">HDT已被冻结，不能进行转账</string>-->
+    <!--<string name="wallet_me_about">≈</string>-->
+    <!--<string name="delete_account">删除钱包账户</string>-->
+    <!--<string name="wallet_detail_delete_dialog" >如未备份CLC钱包而删除APP或删除CLC钱包，-->
+        <!--会导致相关CLC钱包文件丢失，请务必妥善备份好CLC钱包文件，你确认要继续删除当前CLC钱包吗？</string>-->
+
+    <!--<string name="load_more_end">我是有底线的</string>-->
+    <!--<string name="empty_is_null">空页面为空</string>-->
+    <!--<string name="error_is_null">错误页面为空</string>-->
+    <!--<string name="main_is_null">主页面内无填充内容</string>-->
+    <!--<string name="copy_addr_success">钱包地址已复制到剪切板</string>-->
+    <!--<string name="wallet_me_dialog_code">账户二维码</string>-->
+    <!--<string name="address_">地址:</string>-->
+    <!--<string name="private_key_">私钥:</string>-->
+    <!--<string name="look_private_key_tip">私钥未加密，请妥善保存地址和私钥。</string>-->
+    <!--<string name="dialog_edit_name_edit_filename">请输入文件的新名称</string>-->
+    <!--<string name="EditFileNameDialog_not_null">文件名不能为空</string>-->
+    <!--<string name="_set_file_name_dialog_tip">请输入新的文件名称</string>-->
+    <!--<string name="wallet_detail_rename_title">请输入新的钱包名</string>-->
+    <!--<string name="wallet_transfer_success_title">转账成功</string>-->
+    <!--<string name="wallet_transfer_success_des">转账成功</string>-->
+
+    <!--<string name="wallet_transfer_failed_title">转账失败</string>-->
+    <!--<string name="wallet_transfer_failed_again">返回重试</string>-->
+    <!--<string name="copy_hash_success">交易哈希已复制到剪切板</string>-->
+    <!--<string name="nonetwork">无法连接网络，请检查网络设置</string>-->
+    <!--<string name="wallet_transfer_title">转账</string>-->
+    <!--<string name="camear_is_forbid">权限被禁止，无法打开相机</string>-->
+    <!--<string name="wallet_transfer_addr_toast">钱包地址不能为空</string>-->
+    <!--<string name="wallet_transfer_money_toast">转账额度不能为空</string>-->
+    <!--<string name="wallet_transfer_dialog_title">转账信息</string>-->
+    <!--<string name="wallet_transfer_dialog_output">转出账户</string>-->
+    <!--<string name="wallet_transfer_dialog_input">转入账户</string>-->
+    <!--<string name="wallet_transfer_dialog_count">转账数量</string>-->
+    <!--<string name="wallet_transfer_dialog_expect">手续费</string>-->
+    <!--<string name="wallet_transfer_dialog_output_total">支付数量</string>-->
+    <!--<string name="wallet_transfer_dialog_pwd">请输入交易密码</string>-->
+    <!--<string name="wallet_transfer_less">转账余额不足</string>-->
+    <!--<string name="apply_invaild_eth_address">无效地址</string>-->
+    <!--<string name="wallet_transfer_failed_to_yourself">转账失败，不能给自己转账</string>-->
+    <!--<string name="wallet_transfer_amount_zero">转账数量不能为0</string>-->
+    <!--<string name="wallet_transfer_confirm">确认转账</string>-->
+    <!--<string name="wallet_transfer_length_error">最多输入小数点后6位</string>-->
+    <!--<string name="wallet_detail_balance_failed">获取余额失败</string>-->
+    <!--<string name="wallet_transfer_expect_money_pre">每笔收取</string>-->
+    <!--<string name="wallet_transfer_expect_money_suffix_hdt">HDT手续费</string>-->
+    <!--<string name="wallet_transfer_expect_money_suffix_btd">CLC手续费</string>-->
+    <!--<string name="string_get_fee_fail">获取转账手续费失败，请稍后重试</string>-->
+    <!--<string name="activity_error_txt_content">亲，快检查网络是否异常</string>-->
+    <!--<string name="please_input_new_name">请输入新的名字</string>-->
+    <!--<string name="wallet_empty_desc">CLC链生态应用</string>-->
+    <!--<string name="wallet_create_account">创建CLC钱包</string>-->
+    <!--<string name="wallet_creatting">创建私钥和地址中</string>-->
+    <!--<string name="wallet_creatting_desc">请耐心等待…</string>-->
+    <!--<string name="wallet_creat_success">创建成功，请备份钱包</string>-->
+    <!--<string name="wallet_creat_success_desc">私钥用于恢复钱包或重置交易密码，如果丢失私钥，钱包将无法找回，请妥善备份并保管好钱包私钥，不要与他人共享</string>-->
+    <!--<string name="wallet_copy_pri">马上备份</string>-->
+    <!--<string name="wallet_create_prompt">钱包交易密码用于保护钱包私钥和交易授权，\n钱包不保存交易密码，请务必牢记交易密码  </string>-->
+    <!--<string name="wallet_create_pwd">输入钱包交易密码</string>-->
+    <!--<string name="wallet_create_pwd_again">重新输入钱包交易密码</string>-->
+    <!--<string name="wallet_create_pwd_desc">*交易密码至少由8位数字或字母组成</string>-->
+    <!--<string name="wallet_create_agree_right"> 《CLC Wallet用户协议》</string>-->
+    <!--<string name="wallet_create_agree_left">已阅读并同意 </string>-->
+    <!--<color name="brightBlueTwo">#007CFF</color>-->
+    <!--<string name="string_start_4">****"</string>-->
+    <!--<string name="string_pick">转账</string>-->
+    <!--<string name="wallet_detail_money">资产</string>-->
+    <!--<string name="wallet_me_freeze">冻结</string>-->
+    <!--<string name="wallet_detail_explain">CLC钱包说明：\n-->
+<!--1.CLC钱包是专门用于存放CLC数字资产；\n-->
+<!--2.请您自行妥善保管好CLC钱包，一旦CLC提现至CLC钱包，由于CLC钱包是基于区块链去中心化技术，如果发生错误转账、钱包文件丢失、交易密码忘记等情况，炒米科技也无法帮您找回CLC钱包中的CLC数字资产，请务必谨慎操作；\n-->
+<!--3.如未备份CLC钱包而删除APP或删除CLC钱包，会致使相关CLC钱包丢失，请务必初次创建CLC钱包后马上进行备份，并妥善保管好；</string>-->
+    <!--<string name="wallet_import_desc">如遇交易密码忘记，可通过导入钱包私钥重置新的交易密码，请务必安全妥善保管钱包私钥</string>-->
+    <!--<string name="wallet_import_paste_pri">请粘贴钱包私钥</string>-->
+    <!--<string name="wallet_create_input_hint">输入交易密码</string>-->
+    <!--<string name="wallet_create_input_hint_again">再次输入交易密码</string>-->
+    <!--<string name="string_pri_about">什么是钱包私钥？</string>-->
+    <!--<string name="string_success">成功</string>-->
+    <!--<string name="string_default_value">&#45;&#45;</string>-->
+    <!--<string name="wallet_transfer_addr">转入地址</string>-->
+    <!--<string name="wallet_transfer_addr_hint">输入收款地址</string>-->
+    <!--<string name="wallet_transfer_money">转账数量</string>-->
+    <!--<string name="wallet_transfer_money_hint">输入转账数量</string>-->
+    <!--<string name="transfer_remark">交易备注</string>-->
+    <!--<string name="wallet_detail_balance_transfer">可转出(CLC)</string>-->
+    <!--<string name="transfer_remark_hint">请填写交易备注信息</string>-->
+    <!--<string name="string_close">关闭</string>-->
+    <!--<string name="string_normal_value">&#45;&#45;</string>-->
+    <!--<string name="wallet_me_item_addr_left">**** **** **** **** </string>-->
+    <!--<string name="wallet_exchange_address">交易地址：</string>-->
+    <!--<string name="wallet_exchange_hash">交易哈希：</string>-->
+    <!--<string name="input_empty">输入不能为空</string>-->
+    <!--<string name="input_too_long">请输入1-10个字符</string>-->
+    <!--<string name="wallet_create_dialog_failed">创建CLC钱包失败</string>-->
+    <!--<string name="timeout">网络连接超时，请稍后重试</string>-->
+    <!--<string name="question">常见问题</string>-->
+    <!--<string name="wallet_protocol_agree">已阅读并同意</string>-->
+    <!--<string name="wallet_protocol_title">CLC钱包用户协议以及免责声明</string>-->
+    <!--<string name="string_home">钱包</string>-->
+    <!--<string name="wallet_success_success">完成</string>-->
+    <!--<string name="create_success_dialog">地址和私钥已复制到剪切板</string>-->
+    <!--<string name="create_success_address">地址：\n%1$1s</string>-->
+    <!--<string name="create_success_private">私钥：\n%1$1s</string>-->
+    <!--<string name="use_idea">使用条款</string>-->
+    <!--<string name="exchange_info">交易信息</string>-->
+
+    <string name="app_name">CLC Wallet</string>
+    <string name="app_name_test">CLC Test</string>
+    <string name="invalid_time">Ineffective Time</string>
+    <string name="string_success">Success</string>
+    <string name="nonetwork">Unable to access the Internet, please check network settings</string>
+
+    <string name="wallet_create_dialog_failed">Failed</string>
+
+    <string name="wallet_protocol_title">User Agreement and Disclaimer of CLC Wallet</string>
+    <string name="wallet_protocol_agree">Read and Agree </string>
+
+    <string name="wallet_toast_pwd_empty">Password can not be empty</string>
+    <string name="wallet_toast_agree">Please agree the Agreement to continue</string>
+    <string name="wallet_toast_difference">not match</string>
+    <string name="wallet_toast_error">wrong password</string>
+    <string name="wallet_toast_not_subter_8">Please enter at least 8 numbers</string>
+
+    <string name="wallet_success_success">Done</string>
+
+    <string name="wallet_me_title">My CLC</string>
+    <string name="string_btd">CLC</string>
+    <string name="string_hdt">HDT</string>
+
+    <string name="wallet_me_item_addr_left">**** **** **** **** </string>
+    <string name="wallet_me_dialog_code">QR Code</string>
+
+    <string name="wallet_transfer_title">Transfer</string>
+
+    <string name="wallet_transfer_addr">Address</string>
+    <string name="wallet_transfer_addr_hint">please enter transfer in address</string>
+    <string name="wallet_transfer_money">Amount</string>
+    <string name="wallet_transfer_money_hint">please enter transfer amount</string>
+    <string name="wallet_transfer_confirm">Confirm</string>
+    <string name="wallet_transfer_addr_toast">Wallet address can not be empty</string>
+    <string name="wallet_transfer_money_toast">Transfer amount can not be empty</string>
+    <string name="wallet_transfer_dialog_title">Transfer Info</string>
+    <string name="wallet_transfer_dialog_output">Transfer Out Account</string>
+    <string name="wallet_transfer_dialog_input">Transfer In Account</string>
+    <string name="wallet_transfer_dialog_count">Transfer Amount</string>
+    <string name="wallet_transfer_dialog_expect">Transfer Fee</string>
+    <string name="wallet_transfer_dialog_output_total">Payment Amount</string>
+    <string name="wallet_transfer_dialog_pwd">please enter transaction password</string>
+    <string name="wallet_transfer_less">Insufficient Transfer Balance</string>
+
+    <string name="wallet_transfer_success_title">Transfer Success</string>
+    <string name="wallet_transfer_success_des">Transfer Success</string>
+
+    <string name="wallet_transfer_failed_title">Transfer Failed</string>
+    <string name="wallet_transfer_failed_again">Try Again</string>
+    <string name="wallet_transfer_success_btn">Confirm</string>
+
+
+    <string name="wallet_record_title">Records</string>
+    <string name="wallet_record_item_time">Today</string>
+    <string name="wallet_record_item_out">Transfer Out</string>
+    <string name="wallet_record_item_in">Transfer In</string>
+
+
+    <string name="wallet_detail_balance_transfer">Transfer Available</string>
+
+    <string name="wallet_detail_balance_failed">Fail to get balance</string>
+    <string name="wallet_detail_pop_rename">Rename</string>
+    <string name="wallet_detail_explain">CLC Account Description:\n
+1.CLC account is specially used to store the digital asset - CLC;\n
+2.Please take good care of your CLC account. Based on the blockchain decentralized technology, once CLC is withdrawn to your CLC account, in the event of wrong transaction, lost file and forgot transaction password, etc. Singapore BitRice Foundation can\'t help you find your CLC back. Please operate carefully.\n
+3. If you delete the APP or CLC account without backup, it may cause the loss of relevant account files. Please make sure to properly backup the CLC account and take good care of the account files</string>
+    <string name="wallet_detail_rename_title">please enter a new name</string>
+
+    <string name="copy_addr_success">CLC address has been copied to clipboard</string>
+
+
+    <string name="wallet_me_freeze">Frozen</string>
+
+
+    <!--**********************xhun end********************************************-->
+
+    <string name="string_submit">Submit</string>
+    <string name="wallet_private_key_hint">Please enter CLC private key</string>
+
+    <string name="wallet_look_private_key">Private key</string>
+    <string name="wallet_look_word">Export Recovery Phrase</string>
+    <string name="string_copy">Copy</string>
+    <string name="activity_empty_txt_content">No Records</string>
+    <string name="wallet_transfer_failed_to_yourself">Fail to transfer. You can not transfer to yourself</string>
+    <string name="wallet_transfer_length_error">Up to 6 decimal places</string>
+    <string name="wallet_transfer_expect_money_pre">Fee for per transaction</string>
+    <string name="wallet_transfer_expect_money_suffix_hdt">HDT Fee</string>
+    <string name="wallet_transfer_expect_money_suffix_btd">CLC Fee</string>
+    <string name="string_hint">Tips</string>
+    <string name="string_cancel">Cancel</string>
+    <string name="string_ok">OK</string>
+    <string name="wallet_detail_delete_dialog"> If you delete the APP or CLC account without backuping, it will cause the loss of relevant account files. Please make sure you have properly backed up CLC account files. Contiue to delete the CLC account?</string>
+
+    <string name="input_pay_pwd">Enter the transacton password</string>
+    <string name="input_pay_pwd_hint">Please enter at least 8 chars transaction password</string>
+    <string name="private_key_">Private Key:</string>
+    <string name="address_">Address:</string>
+    <string name="look_private_key_tip">Private key is not encrypted, please keep the address and private key properly.</string>
+    <string name="please_input_new_name">Please enter a new name</string>
+    <string name="dialog_edit_name_edit_filename">Please enter a new file name</string>
+    <string name="EditFileNameDialog_not_null">File name can not be empty</string>
+    <string name="_set_file_name_dialog_tip">Please enter a new file name称</string>
+
+    <string name="wallet_account_name">Account</string>
+    <string name="activity_custom_loding_dialog_layout_txt_loading">Loading...please wait~</string>
+    <string name="activity_custom_loding_dialog_layout_txt_point">...</string>
+
+    <string name="question">FAQ</string>
+    <string name="use_idea">Terms of Use</string>
+
+    <string name="string_close">Close</string>
+
+    <string name="empty_is_null">No Records</string>
+    <string name="error_is_null">No Records</string>
+    <string name="main_is_null">No Records</string>
+    <string name="load_more_end">No more files</string>
+    <string name="activity_error_txt_content">Please check your network~</string>
+    <string name="apply_invaild_eth_address">Invaild Address</string>
+
+    <string name="string_normal_value">--</string>
+
+    <string name="exchange_info">Transaction Information</string>
+
+
+
+
+
+
+
+    <!-- 屯米 -->
+    <string name="wallet_scret_error">Wrong private key, please enter again</string>
+
+    <string name="wallet_detail_freeze_btd">CLC has been frozen, unable to transfer</string>
+    <string name="wallet_detail_freeze_hdt">HDT has been frozen, unable to transfer</string>
+    <string name="wallet_me_about">≈</string>
+
+
+
+    <string name="timeout">Network timed out, please try again later</string>
+
+    <string name="skip_intro">Skip</string>
+    <string name="skip_intro_next">Try Now</string>
+    <string name="select_title">Edit</string>
+
+
+
+
+    <string name="input_empty">Can not enter nothing</string>
+
+
+
+    <string name="please_select">Select</string>
+    <string name="select_all">Select All</string>
+    <string name="unselect_all">Deselect All</string>
+
+
+
+    <string name="phone_is_exist">Account already exist</string>
+
+
+
+    <string name="string_default_value">--</string>
+
+
+    <string name="string_get_fee_fail">Fail to get transfer fee</string>
+
+    <string name="transfer_remark">Remark</string>
+    <string name="transfer_remark_hint">Please enter transfer remark</string>
+
+
+
+
+
+
+    <string name="wallet_create_input_hint">Please enter the transaction password</string>
+    <string name="wallet_create_input_hint_again">Please enter again to confirm</string>
+    <string name="wallet_create_pwd_desc">*transaction password is made up of 8-char numbers or letters. </string>
+
+    <string name="input_too_long">Please enter 1-10 chars.</string>
+
+    <string name="wallet_creatting">private key and address is creating...</string>
+    <string name="wallet_creatting_desc">please wait…</string>
+
+
+
+    <string name="string_home">Wallet</string>
+
+    <string name="wallet_create_prompt">The transaction password is used to protect the private key and transaction authorization.\nThe Wallet will not save your transaction password, please keep it carefully.</string>
+    <string name="wallet_create_agree_right">CLC Wallet User Agreement</string>
+    <string name="wallet_create_agree_left">Read and Agree </string>
+    <string name="wallet_import_desc">If you forgot the transaction password, you can reset by importing the private key, so please keep the private key properly. </string>
+    <string name="wallet_creat_success_desc">The private key is used to recover the account and reset the transaction password, if lost, it cannot be found back. Please back up and save it properly, not sharing with others.</string>
+    <string name="wallet_copy_pri">Backup Now</string>
+
+
+    <string name="please_sure_read_write_extra_permisssion">Please open the Check-in permission in CLC Wallet to upgrade APK on system Setting page. </string>
+
+    <string name="string_pick">Transfer</string>
+
+    <string name="wallet_create_account">Create Wallet</string>
+    <string name="wallet_me_pop_new">Create Wallet</string>
+    <string name="wallet_me_pop_import">Import Wallet</string>
+
+    <string name="wallet_create_import_fail">Import Wallet Failed</string>
+    <string name="wallet_create_import_success">Import Wallet Success</string>
+    <string name="wallet_create_pwd">Please enter the transaction password</string>
+    <string name="wallet_create_pwd_again">Please enter again</string>
+    <string name="wallet_import_paste_pri">Please paste the private key</string>
+    <string name="string_pri_about">What is the private key?</string>
+    <string name="wallet_creat_success">Success, please backup the wallet</string>
+    <string name="wallet_detail_pop_delete">Delete</string>
+
+    <string name="wallet_transfer_amount_zero">Transfer number cannot be zero</string>
+
+    <string name="create_success_address">Address: \n%1$1s</string>
+    <string name="create_success_private">Private Key: \n%1$1s</string>
+    <string name="create_success_dialog">Address and private key has been copied to the clipboard.</string>
+
+    <string name="string_start_4">****"</string>
+    <string name="wallet_detail_money">Assets</string>
+    <string name="wallet_detail_titile">Wallet</string>
+
+
+
+
+
+
+    <string name="wallet_exchange_hash">Transaction Hash:</string>
+    <string name="copy_hash_success">Transaction hash has been copied to</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="wallet_exchange_address">Transaction Address:</string>
+
+
+    <string name="connect_fail">Connect Fail</string>
+    <string name="wallet_empty_desc">Support Smart Escrow and other well-prepared CLC eco-chain applications</string>
+    <string name="camear_is_forbid">Permission forbidden, can not open the camera</string>
+
+
+
+    <!--助记词-->
+    <string name="words_create_success">Success, please backup the Recovery Phrase</string>
+    <string name="word_create_tips">Having Recovery Phrase equals to having asset ownership of the Wallet</string>
+    <string name="words_backup">Backup Recovery Phrase</string>
+    <string name="words_backup_tips">Please use pen and paper to copy it correctly\nIf your phone was lost, stolen, broken, Recovery Phrase will help you recover your assets</string>
+    <string name="word_work">Function of Recovery Phrase</string>
+    <string name="word_work_tips">Recovery Phrase is used to recover account or reset transaction password, please copy it to paper correctly or copy it to a safe place that only you can find.</string>
+
+    <string name="word_backup12">Backup 12 Recovery Phrase</string>
+    <string name="word_backup12_tips">Please copy Recovery Phrase correctly in order and backup it safely</string>
+    <string name="word_backup12_tips1">Keep Recovery Phrase properly to a safe place where isolates network</string>
+    <string name="word_backup12_tips2">Please do not share and save your Recovery Phrase in a networked environment, such as email, album and social apps.</string>
+    <string name="word_backup_confirm">Confirm</string>
+
+    <string name="word_confirm">Confirm the Recovery Phrase</string>
+    <string name="word_confirm_tips">Please click the Recovery Phrase in order to confirm that you have backed it up correctly</string>
+    <string name="word_confirm_done">Done</string>
+
+    <string name="private_import">Private Key</string>
+    <string name="word_import">Recovery Phrase</string>
+    <string name="word_import_tips">Please enter the recovery phrase and separates by a space</string>
+    <string name="crate_success">Success</string>
+
+    <string name="atmost_recovery">At most 12 Recovery Phrase</string>
+
+
+
+
+    <string name="app_update">Update</string>
+    <string name="in_time_install">Install</string>
+    <string name="string_issue">Issue</string>
+    <string name="version_need_update">Important update, please wait...</string>
+    <string name="download_fail">Download Fail</string>
+    <string name="is_latest_version">No Update</string>
+    <string name="start_download">Start to download</string>
+    <string name="content_view_notificationTitle">Downloading</string>
+    <string name="download_zero_progress">0%</string>
+    <string name="data_is_exception">Data Error</string>
+
+    <string name="is_updateing">Updating %1$s</string>
+    <string name="update_error">Update failed, please try again</string>
+
+</resources>

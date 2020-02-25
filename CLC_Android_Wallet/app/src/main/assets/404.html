@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>错误页面</title>
+    <style>
+
+    </style>
+</head>
+
+<body onclick="reload()">
+<div id="app" style="text-align:center;margin-top:50%;">
+    <img src="./default_error.png" style="width:40%;"/>
+    <p style="color:#b2b2b2;">网络连接异常，点击重试</p>
+</div>
+
+<!-- built files will be auto injected -->
+<script type="text/javascript">
+        function reload() {
+            //alert(url);
+            client.reload();
+        }
+    </script>
+</body>
+
+</html>

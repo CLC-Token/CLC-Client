@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toast_margin_top">85dp</dimen>
+    <dimen name="head_height">48dp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+    <dimen name="normal_text_size">14sp</dimen>
+    <dimen name="big_text_size">16sp</dimen>
+    <dimen name="very1_big_text_size">18sp</dimen>
+    <dimen name="very2_big_text_size">20sp</dimen>
+    <dimen name="very4_big_text_size">24sp</dimen>
+    <dimen name="qrcode_size">200dp</dimen>
+    <dimen name="wallet_create_input_hint">13sp</dimen>
+    <dimen name="wallet_create_agree">12sp</dimen>
+    <dimen name="loading_progressbar_size_56">56dp</dimen>
+    <dimen name="item_height_60">60dp</dimen>
+    <dimen name="loading_progressbar_size_40">40dp</dimen>
+    <dimen name="wxj_item_margin_right_left">15dp</dimen>
+    <dimen name="divider_normal">0.5dp</dimen>
+    <dimen name="dp_0">0dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_28">28dp</dimen>
+    <dimen name="sp_11">11sp</dimen>
+
+    <dimen name="btn_height">48dp</dimen>
+    <dimen name="item_padding_right_left">15dp</dimen>
+    <dimen name="sp_10">10sp</dimen>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="sp_20">20sp</dimen>
+    <dimen name="sp_22">22sp</dimen>
+    <dimen name="dp_70">70dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="item_margin_right_left">15dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+</resources>

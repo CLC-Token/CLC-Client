@@ -1,0 +1,20 @@
+<resources>
+    <string name="ip_all_images">All Images</string>
+    <string name="ip_folder_image_count">%1$d Images</string>
+    <string name="ip_preview_image_count">%1$d/%2$d</string>
+    <string name="ip_select_limit">Select up to %1$d images</string>
+    <string name="ip_complete">Done</string>
+    <string name="ip_select_complete">(%1$d/%2$d) Done</string>
+    <string name="ip_preview">Preview</string>
+    <string name="ip_preview_count">(%1$d) Preview</string>
+    <string name="ip_photo_crop">Crop</string>
+    <string name="ip_origin">Full Size</string>
+    <string name="ip_origin_size">(%1$s) Full Size</string>
+    <string name="imagepicker_string_select">Select</string>
+    <string name="imagepicker_tasks_photo">Take Photos</string>
+    <string name="imagepicker_left_title">Image</string>
+    <string name="lzy_tip">Tips</string>
+    <string name="lzy_ok">OK</string>
+    <string name="lzy_cancel">Cancel</string>
+    <string name="lzy_are_you_sure_delete_photo">Confirm to delete the image?</string>
+</resources>

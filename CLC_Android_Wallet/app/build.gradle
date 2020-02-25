@@ -1,0 +1,275 @@
+apply plugin: 'com.android.application'
+
+def verName = "1.0.2"
+
+def static releaseTime() {
+    return new Date().format("yyyyMMddHHmmss")
+}
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    android {
+        useLibrary 'org.apache.http.legacy'
+
+        defaultConfig {
+            multiDexEnabled true
+        }
+
+        aaptOptions.cruncherEnabled = false
+        aaptOptions.useNewCruncher = false
+
+        dexOptions {
+            javaMaxHeapSize "8g"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+    def versionPropsFile = file("version.properties")
+    if (versionPropsFile.canRead()) {
+
+        Properties versionProps = new Properties()
+        versionProps.load(new FileInputStream(versionPropsFile))
+
+        def runTasks = gradle.startParameter.taskNames
+        def int verCode = versionProps['VERSION_CODE'].toInteger()
+        if (':app:assembleBtdAppRelease' in runTasks) {
+            versionProps['VERSION_CODE'] = (++verCode).toString()
+            def comment = "Automatically generated file. DO NOT MODIFY.\nGradle Task :${runTasks} run, ++versionCode."
+            versionProps.store(versionPropsFile.newWriter(), comment)
+        }
+
+        defaultConfig {
+//            applicationId "com.btd.wallet"
+            minSdkVersion rootProject.ext.minSdkVersion
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            versionCode verCode
+            versionName verName
+
+            testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+            vectorDrawables.useSupportLibrary = true
+
+            flavorDimensions "mode"
+
+            ndk {
+                // 设置支持的SO库架构
+                abiFilters 'armeabi-v7a', 'armeabi','x86'//, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+            }
+        }
+    } else {
+        throw new GradleException("Could not read version.properties!")
+    }
+    /*
+   说明：正式环境，测试环境（阿里云测试服务器wyxj.com），开发环境（112.94.31.55）
+   */
+    productFlavors {
+        development {
+            applicationId "com.btd.wallet.clc"
+            manifestPlaceholders = [str                 : "isDevelopment",
+                                    package_name        : "com.btd.wallet.clc",
+                                    app_name            : "@string/app_name_test",
+            ]
+            buildConfigField("boolean", "isRelease", "false")
+            buildConfigField("boolean", "isDevelopment", "true")
+            versionNameSuffix "_${releaseTime()}"
+        }
+
+        official {
+            applicationId "com.btd.wallet.clc"
+            manifestPlaceholders = [str                 : "isDevelopment",
+                                    package_name        : "com.btd.wallet.clc",
+                                    app_name            : "@string/app_name",
+            ]
+            buildConfigField("boolean", "isDevelopment", "false")
+            buildConfigField("boolean", "isRelease", "true")
+        }
+    }
+    applicationVariants.all { variant ->
+        def buildType = variant.buildType.name
+        def log = buildType.equals("debug") ? "_log" : ""
+        variant.outputs.all { output ->
+            def flavorName = variant.flavorName
+            def versionName = variant.versionName
+            def versionCode = variant.versionCode
+            outputFileName = "CLC_${versionCode}_${versionName}_${flavorName}${log}.apk"
+        }
+    }
+    packagingOptions {//加上这写代码
+        pickFirst 'META-INF/rxjava.properties'
+        exclude 'lib/x86_64/darwin/libscrypt.dylib'
+        exclude 'com/google/thirdparty/publicsuffix/PublicSuffixPatterns.gwt.xml'
+        exclude 'com/google/thirdparty/publicsuffix/PublicSuffixType.gwt.xml'
+        exclude 'org/bitcoinj/crypto/mnemonic/wordlist/english.txt'
+        exclude 'org/bitcoinj/crypto/cacerts'
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs' //this way we can find the .aar file in libs folder
+            dirs '../library/libs', 'libs'
+        }
+    }
+
+    //在layout文件夹下建立子文件夹
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            res.srcDirs = [
+
+                    'src/main/res/layout/load', //自定义recylerview加载页、错误页、空白页
+                    'src/main/res/layout/base', //base类所需layout
+                    'src/main/res/layout/bottom',   //底部组件layout
+                    'src/main/res/layout/user',   //用户layout(登录、注册等)
+                    'src/main/res/layout/main',   //主页布局
+                    'src/main/res/layout/widght',   //自定义控件布局
+                    'src/main/res/layout/adapter',   //适配器需要的item
+                    'src/main/res/layout/home',   //首页，收益
+                    'src/main/res/layout/zxing',   //二维码
+                    'src/main/res/layout/wallet',   //钱包的操作
+                    'src/main/res/layout/lzy',
+                    'src/main/res/layout',
+                    'src/main/res/layout/mymenu',          //自定义menu
+                    'src/main/res'
+            ]
+        }
+    }
+    defaultConfig {
+        testInstrumentationRunner = 'android.support.test.runner.AndroidJUnitRunner'
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation('de.keyboardsurfer.android.widget:crouton:1.8.5@aar') {
+        // exclusion is not necessary, but generally a good idea.
+        exclude group: 'com.google.android', module: 'support-v4'
+    }
+
+    //基础类jar包
+    implementation project(':library')
+
+    implementation project(':hdtsdk')
+
+    //钱包sdk和library基础库aar包
+    //  implementation(name: 'hdtsdk', ext: 'aar')
+
+    //二维码
+    implementation files('libs/zxing.jar')
+
+    //注解框架
+    implementation 'com.jakewharton:butterknife:8.8.1'
+
+    //依赖注入
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //support库
+    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+
+    //fragment组件库
+    implementation 'me.yokeyword:fragmentation:1.3.6'
+
+    //通用Adapter
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
+
+    //方法超过65536
+    implementation 'com.android.support:multidex:1.0.3'
+
+    //图片控制类
+    implementation 'com.github.chrisbanes.photoview:library:1.2.4'
+
+    //json动画类
+    implementation 'com.airbnb.android:lottie:2.7.0'
+
+    //可chrome://inspect查看数据库类库
+    implementation 'com.facebook.stetho:stetho:1.4.1'
+
+    //检测内存泄漏
+
+    //    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+
+    //    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+    //    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+    //    implementation files('libs/base64.jar')
+
+
+
+    //权限申请包
+    implementation 'com.yanzhenjie:permission:1.0.4'
+
+    //工具类包
+    implementation 'com.blankj:utilcode:1.6.4'
+
+    //recyclerViewPager替代ViewPager包
+    implementation 'com.github.lsjwzh.RecyclerViewPager:lib:v1.1.2@aar'
+
+    //图片伸缩控件
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+
+    //界面滑动库:主要用于界面滑动,可进行拖拽
+
+    //    compile 'com.simplecityapps:recyclerview-fastscroll:1.0.16'
+
+    //    implementation 'com.daimajia.easing:library:2.0@aar'
+
+    //    //卡片控件
+    implementation 'com.android.support:cardview-v7:25.3.1'
+
+    //小红点
+    implementation 'q.rorbin:badgeview:1.1.2'
+
+    //替代SwipeRefreshLayout
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-23'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-23'
+
+    //没有使用特殊Header，可以不加这行
+
+    //    implementation 'com.zhy:okhttputils:2.6.2'
+    implementation 'org.litepal.android:core:1.3.2'
+
+    //    implementation(name: 'hdtsdk', ext: 'aar')
+  //  implementation(name: 'aFileChooser-release', ext: 'aar')
+
+    //tab滑动选择
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:3.0.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'design'
+        exclude group: 'com.android.support', module: 'recyclerview-v7'
+    }
+
+    //权限申请s
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+ //   implementation 'org.bitcoinj:bitcoinj-core:0.14.7'
+    implementation "org.slf4j:slf4j-simple:1.7.25"
+    api "org.slf4j:slf4j-api:1.7.25"
+ //   implementation 'party.loveit:bip44forandroidlibrary:1.0.7'
+    implementation 'com.google.guava:guava:24.0-android'
+    implementation files('libs/bitcoinj-core-0.15.6.jar')
+   // implementation 'org.bitcoinj:bitcoinj-core:0.14.7'
+}
+
